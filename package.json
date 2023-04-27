@@ -11,9 +11,9 @@
     "typescript"
   ],
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
+    "dev": "tinacms dev -c \"next\"",
+    "build": "tinacms build && next build",
+    "start": "tinacms build && next start",
     "export": "next build && next export",
     "lint": "eslint --ignore-path .gitignore --fix",
     "format": "prettier --ignore-path .gitignore \"pages/**/*.+(ts|js|tsx)\" --write",
@@ -26,9 +26,11 @@
     ]
   },
   "dependencies": {
+    "@tinacms/cli": "1.5.8",
     "next": "13.3.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tinacms": "1.5.1"
   },
   "devDependencies": {
     "@emotion/react": "11.10.6",
